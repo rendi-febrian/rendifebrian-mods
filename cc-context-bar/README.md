@@ -58,6 +58,23 @@ allows on `Box`/`Text` (one bad prop fails the whole tree). It also asserts the
 band is exactly one row, that it yields to a survey, that it omits limits the
 account doesn't report, and that the mod draws nothing into another pane.
 
+## What it touches
+
+Disclosure, so you can check it against `claude plugin validate`:
+
+- **Events hooked**: `session.start`, `turn.complete`, `session.measure`,
+  `command.run`, `ui.render` (once for the band, once for the pane).
+- **Mods API calls**: `$.session.usage`, `$.session.*` reads, `$.store.get/set`,
+  `$.command.register`, `$.ui.resolve`, `$.ui.invalidate`, `$.ui.panes`,
+  `$.ui.open`, `$.ui.close`.
+- **No** `$.process.run` or `$.process.spawn` — it starts nothing.
+- **No** `$.http.fetch` — it sends nothing anywhere.
+- **No** `$.fs.*` — it writes nothing; the only persisted state is its own
+  ledger in the mods API store (`cc-context-bar:ledger`), which holds token
+  counts and the price table, no prompts and no file contents.
+- The only data it reads from your session is what `$.session.usage()` returns:
+  context-window fill, rate-limit windows, and the session cost.
+
 ## Cost figures
 
 `est` is computed from `PRICES` in `hooks/register.js` (USD per million tokens,
