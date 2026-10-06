@@ -1,0 +1,16 @@
+{
+  "name": "rendifebrian-mods",
+  "owner": { "name": "Rendi Febrian", "url": "https://github.com/rendi-febrian" },
+  "metadata": {
+    "description": "Claude Code mods: context bar above the prompt, with tokens in/out and cost."
+  },
+  "plugins": [
+    {
+      "name": "cc-context-bar",
+      "source": "./cc-context-bar",
+      "description": "Context bar above the prompt: context length, tokens in/out, sparkline, estimated cost, plan limits. Adds /context-bar for a detailed pane.",
+      "category": "status",
+      "tags": ["context", "tokens", "cost", "status", "mod", "usage"]
+    }
+  ]
+}

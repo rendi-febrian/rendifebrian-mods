@@ -1,0 +1,8 @@
+{
+  "name": "cc-context-bar",
+  "description": "Context bar for Claude Code: context length, tokens in/out and estimated cost, drawn in the band above the prompt.",
+  "author": { "name": "Rendi Febrian" },
+  "homepage": "https://github.com/rendi-febrian/rendifebrian-mods",
+  "repository": "https://github.com/rendi-febrian/rendifebrian-mods",
+  "keywords": ["mods", "context", "tokens", "cost", "status"]
+}
