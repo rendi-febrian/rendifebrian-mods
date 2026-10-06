@@ -3,6 +3,13 @@
 A **Claude Code mod** that draws a live readout of the context window in the
 band directly above the prompt — plus a `/context-bar` pane with the detail.
 
+Install:
+
+```
+/plugin marketplace add rendi-febrian/rendifebrian-mods
+/plugin install cc-context-bar@rendifebrian-mods
+```
+
 ```
 ☂ Showers 67%  133k/200k  ▁▂▂▄▄▅▅▆▆▇▇█  ▲+133k  in 15k/out 6.1k  Σ 150k/35k  est $1.22 ($0.1722)  · 5h 45%  · 7d 78%
 ```
